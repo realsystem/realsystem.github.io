@@ -1,0 +1,29 @@
+{% if page.comments %}
+  <div id="disqus_thread"></div>
+    <script>
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://www-overlandn-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
+
+<footer class="site-footer h-card">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-3">
+        {%- include social.html -%}
+      </div>
+      <div class="footer-col footer-col-4">
+        Let me know how you found my site, <a href="mailto:overlandprojectlab@gmail.com?subject=How I Found www.overlandn.com&body=How I found www.overlandn.com: ">send me an email!</a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
