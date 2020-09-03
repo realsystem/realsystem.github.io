@@ -33,7 +33,7 @@ github_username:  realsystem
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-seo-tag
 
 # Exclude from processing.
