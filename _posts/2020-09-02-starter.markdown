@@ -5,11 +5,8 @@ date:   2020-09-02 21:12:32 -0700
 categories: jekyll update
 comments: true
 ---
-It is started here, sunny California, driving south. The minimum gear and a new car.
 ![start_pic](/assets/images/DSC02062.jpg)
 
-After two years of random camping the setup has changed.
 ![to_this](/assets/images/IMG_20190801_202008.jpg)
 
-And finally it rendered to a rig with all what I need.
 ![current_view](/assets/images/IMG_20210320_183156.jpg)
