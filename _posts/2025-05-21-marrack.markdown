@@ -1,7 +1,7 @@
-**Title: Upgrading Your Tacoma Steering: MarRack Installation Guide (Land Cruiser Rack Swap)**
+**Upgrading Your Tacoma Steering: MarRack Installation Guide (Land Cruiser Rack Swap)**
 
-**Intro:**
-For serious off-roaders and overland enthusiasts, upgrading your Toyota Tacoma's steering is more than a convenience—it's a necessity. The factory steering rack is known to be a weak point, especially for those running larger tires, long-travel suspension systems, or encountering high-stress terrain. That's where the MarRack comes in: a Land Cruiser steering rack modified by Marlin Crawler to bolt into your Tacoma, offering improved strength, reliability, and control. In this guide, we walk you through the MarRack preparation and installation process as part of a full Marlin Crawler Long Travel (LT) kit upgrade.
+**Intro**
+For serious off-roaders and overland enthusiasts, upgrading your Toyota Tacoma's steering is more than a convenience — it's a necessity. The factory steering rack is known to be a weak point, especially for those running larger tires, long-travel suspension systems, or encountering high-stress terrain. That's where the MarRack comes in. A Land Cruiser steering rack modified by Marlin Crawler to bolt into your Tacoma, offering improved strength, reliability, and control. In this guide, we walk you through the MarRack preparation and installation process as part of a full Marlin Crawler Long Travel (LT) kit upgrade.
 
 ---
 
@@ -16,7 +16,7 @@ The OEM Tacoma steering rack performs well in stock applications, but it struggl
 
 The factory rack often exhibits excessive play, reduced steering precision, and can even suffer internal damage over time. By upgrading to the MarRack, you benefit from the durability and proven strength of the Land Cruiser platform while retaining compatibility with the Tacoma's chassis.
 
-**When You Might Not Need a MarRack Upgrade:**
+**When You Might Not Need a MarRack Upgrade**
 Not every Tacoma owner needs this upgrade. You may be fine with your stock rack if:
 
 * You're running factory-sized tires (31-33")
@@ -88,7 +88,7 @@ With everything torqued to spec and aligned, your Tacoma now benefits from the s
 
 ---
 
-**Conclusion:**
+**Conclusion**
 The MarRack upgrade is a game-changing mod for off-roaders who demand precision and durability from their steering. Whether you’re running trails, rocks, or overlanding through remote regions, the confidence and feel you gain with this setup are undeniable. When paired with the Marlin Crawler Long Travel Kit, the MarRack ensures your Tacoma is ready for anything.
 
 If you have questions or want to see this install in action, check out our \[YouTube video walkthrough here].
