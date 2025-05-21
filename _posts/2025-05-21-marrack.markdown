@@ -1,0 +1,94 @@
+**Title: Upgrading Your Tacoma Steering: MarRack Installation Guide (Land Cruiser Rack Swap)**
+
+**Intro:**
+For serious off-roaders and overland enthusiasts, upgrading your Toyota Tacoma's steering is more than a convenience—it's a necessity. The factory steering rack is known to be a weak point, especially for those running larger tires, long-travel suspension systems, or encountering high-stress terrain. That's where the MarRack comes in: a Land Cruiser steering rack modified by Marlin Crawler to bolt into your Tacoma, offering improved strength, reliability, and control. In this guide, we walk you through the MarRack preparation and installation process as part of a full Marlin Crawler Long Travel (LT) kit upgrade.
+
+---
+
+**Why Replace Your Factory Steering Rack?**
+The OEM Tacoma steering rack performs well in stock applications, but it struggles under off-road stress, particularly with the following setups:
+
+* Long-travel suspension kits
+* 35"+ tires
+* Rock crawling and aggressive off-road use
+* High torque demands from lockers or upgraded powertrains
+* Repeated impacts from technical terrain
+
+The factory rack often exhibits excessive play, reduced steering precision, and can even suffer internal damage over time. By upgrading to the MarRack, you benefit from the durability and proven strength of the Land Cruiser platform while retaining compatibility with the Tacoma's chassis.
+
+**When You Might Not Need a MarRack Upgrade:**
+Not every Tacoma owner needs this upgrade. You may be fine with your stock rack if:
+
+* You're running factory-sized tires (31-33")
+* Your truck is mainly a daily driver or light weekend wheeler
+* You're using a mid-travel suspension system
+* You prioritize factory steering feel and minimal fabrication
+
+If your use case doesn’t push your Tacoma's limits, you can likely stick with the stock rack until signs of wear appear.
+
+---
+
+**Section 1: MarRack Preparation**
+Before diving into the chassis, we need to prep the MarRack itself:
+
+1. **Remove Center Mount Assembly**
+2. **Remove LH Rack Rubber Bushings**
+3. **Install LH MarRack Bushing**
+4. **O-ring Conversion (Tacoma & 2010+ SUV)**
+5. **Remove Both Tie Rod Ends**
+6. **Remove LH Boot Clamps**
+7. **Remove LH Steering Rack Boot**
+8. **Remove LH Steering Rack End Sub-assembly**
+
+These steps ensure that the steering rack is ready for custom fitment and avoids clearance issues during installation.
+
+---
+
+**Section 2: Frame Preparation**
+Your Tacoma's frame will need minor modifications to fit the larger MarRack:
+
+1. **Cut Lower Hole for RH Side Frame Insert**
+2. **Cut Upper Hole for RH Frame Insert**
+3. **Insert MarRack into Vehicle**
+4. **Clearance Top LH Side of Sub-frame**
+5. **Reinstall MarRack**
+6. **Weld Frame Inserts to Frame**
+
+This is a critical section. Precision is key to ensure alignment and structural integrity when installing the heavier-duty rack.
+
+---
+
+**Section 3: Steering Shaft Preparation**
+The MarRack’s geometry differs slightly from the Tacoma rack, so modifications to the steering shaft are often required:
+
+1. **Test Fit Original Sector Shaft**
+2. **Inspect Frame Interference**
+3. **Measure Original Sector Shaft Length**
+4. **Modify for U-Joint Interference** (Few Applications)
+5. **Modify for Bellow Interference** (All Applications)
+6. **Confirm Clearance of Modified Sector Shaft**
+7. **Verify Total Length**
+8. **Weld Sector Shaft**
+
+This ensures full range of motion without binding or obstruction.
+
+---
+
+**Section 4: Final MarRack Installation**
+Now that the rack and vehicle are prepped, you can proceed with installation:
+
+1. **Center the MarRack**
+2. **Mount the MarRack to Frame**
+3. **Connect Power Steering Lines**
+4. **Dress Routing of Steering Lines**
+5. **Reinstall LH Inner Tie Rod, Boot, and Clamps**
+6. **Reinstall Front Differential and Driveline**
+
+With everything torqued to spec and aligned, your Tacoma now benefits from the significantly stronger Land Cruiser rack.
+
+---
+
+**Conclusion:**
+The MarRack upgrade is a game-changing mod for off-roaders who demand precision and durability from their steering. Whether you’re running trails, rocks, or overlanding through remote regions, the confidence and feel you gain with this setup are undeniable. When paired with the Marlin Crawler Long Travel Kit, the MarRack ensures your Tacoma is ready for anything.
+
+If you have questions or want to see this install in action, check out our \[YouTube video walkthrough here].
