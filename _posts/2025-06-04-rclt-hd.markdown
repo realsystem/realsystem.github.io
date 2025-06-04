@@ -1,10 +1,10 @@
-# 🛠️ How to Install the Marlin Crawler RCLT HD Long Travel Suspension on a 3rd Gen Toyota Tacoma
+# How to Install the Marlin Crawler RCLT HD Long Travel Suspension on a 3rd Gen Toyota Tacoma
 
 **Keywords:** _Tacoma long travel suspension install, RCLT HD installation guide, Marlin Crawler Tacoma upgrade, long travel IFS Tacoma, heavy duty suspension Tacoma_
 
 ---
 
-## 🚙 Why Upgrade to the RCLT HD?
+## Why Upgrade to the RCLT HD?
 
 If you're serious about off-road performance and rock crawling, the **Marlin Crawler RCLT HD** is a game-changing upgrade for your 3rd Gen Toyota Tacoma. This heavy-duty **long travel independent front suspension (IFS)** system is engineered for strength, durability, and control — even in the toughest conditions.
 
@@ -19,11 +19,11 @@ Whether you’re building a rock crawler, overland rig, or weekend warrior, this
 
 ---
 
-## 🔧 What You’ll Need for the Installation
+## What You’ll Need for the Installation
 
 Before starting the RCLT HD installation, make sure you have these tools and supplies on hand:
 
-### 🧰 Essential Tools:
+### Essential Tools:
 
 - Torque wrench (in-lbs and ft-lbs)
 - Hand wrenches: 17mm, 19mm, 21mm, etc.  
@@ -33,7 +33,7 @@ Before starting the RCLT HD installation, make sure you have these tools and sup
 - Floor jack + jack stands  
 - Grease gun (90° fitting recommended)
 
-### 🛢️ Lubricants & Extras:
+### Lubricants & Extras:
 
 - Water-resistant grease (marine/silicone-Teflon)  
 - Multi-purpose grease  
@@ -42,13 +42,13 @@ Before starting the RCLT HD installation, make sure you have these tools and sup
 
 ---
 
-## 🛠️ Full Step-by-Step Guide: RCLT HD Install on Tacoma
+## Full Step-by-Step Guide: RCLT HD Install on Tacoma
 
 Here’s a breakdown of how to install the **RCLT HD** on a 3rd Gen Tacoma. You can complete this with basic mechanical knowledge and some patience.
 
 ---
 
-### ✅ Step 1: Pre-Installation Prep
+### Step 1: Pre-Installation Prep
 
 #### Flush the Power Steering System  
 Old fluid can cause premature wear on your new MarRack. Flush and refill with clean power steering fluid.
@@ -63,7 +63,7 @@ Take off the following components:
 
 ---
 
-### ✅ Step 2: Prepare the HD Knuckles
+### Step 2: Prepare the HD Knuckles
 
 You have two options here:
 
@@ -74,7 +74,7 @@ Finally, install the **inner oil seals** on both knuckles.
 
 ---
 
-### ✅ Step 3: Assemble Upper Control Arms (UCAs)
+### Step 3: Assemble Upper Control Arms (UCAs)
 
 1. **Install grease Zerks** – Torque to **30 in-lbs**  
 2. **Grease and insert bushings**  
@@ -84,7 +84,7 @@ UCAs feature thick ¼” bracing and are designed for max clearance and travel.
 
 ---
 
-### ✅ Step 4: Assemble Lower Control Arms (LCAs)
+### Step 4: Assemble Lower Control Arms (LCAs)
 
 1. **Install grease Zerks** – Same as UCAs  
 2. **Grease and install oversized bushings**  
@@ -97,7 +97,7 @@ LCAs are engineered for max durability, impact absorption, and increased approac
 
 ---
 
-### ✅ Step 5: Install the RCLT HD Components
+### Step 5: Install the RCLT HD Components
 
 #### Install Upper Control Arms
 
@@ -115,7 +115,7 @@ Alternatively, upgrade to **2015+ 4Runner/GX460 calipers and rotors** for an OEM
 
 ---
 
-## 🧪 Final Steps & Inspection
+## Final Steps & Inspection
 
 - Double-check **torque specs** on all bolts  
 - Fully grease all control arm bushings  
@@ -125,20 +125,11 @@ Alternatively, upgrade to **2015+ 4Runner/GX460 calipers and rotors** for an OEM
 
 ---
 
-## 📸 Watch the Full Install
+## Watch the Full Install
 
 Want to see the whole process in action? Check out our **[YouTube video](https://youtu.be/ptKyAY0qIQM?si=u2tImJJrQzOSX9je)** with full RCLT HD installation coverage — tools, tips, and trail-tested results.
 
-👉 **[[Subscribe to our channel]](https://www.youtube.com/@realsystemrobot)** for more Toyota Tacoma builds, mods, and off-road content!
+ **[[Subscribe to our channel]](https://www.youtube.com/@realsystemrobot)** for more Toyota Tacoma builds, mods, and off-road content!
 
 ---
 
-## 🔖 Best Hashtags for Sharing Your Build
-
-`#RCLTHD #TacomaBuild #MarlinCrawler #ToyotaTacoma #LongTravelSuspension #OffRoadMods #TacomaDIY #TacomaUpgrade`
-
----
-
-## 📬 Got Questions?
-
-Drop your questions in the comments or message us — we’re happy to help you get your RCLT HD install right the first time.
