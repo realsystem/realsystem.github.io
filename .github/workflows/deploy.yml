@@ -28,7 +28,7 @@ jobs:
       - name: Verify dist exists
         run: |
           if [ ! -d "dist" ]; then
-            echo "❌ dist folder missing"
+            echo "dist folder missing"
             exit 1
           fi
           ls -la dist
