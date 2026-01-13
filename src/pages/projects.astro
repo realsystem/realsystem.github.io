@@ -1,11 +1,25 @@
-import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Projects | RealSystem">
-    <section class="max-w-5xl mx-auto py-24">
-        <h2 class="text-3xl font-bold mb-8">Projects</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="p-6 bg-zinc-900 rounded-xl">Truck Build</div>
-            <div class="p-6 bg-zinc-900 rounded-xl">Overland Setup</div>
-        </div>
-    </section>
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  { title: 'Truck Lift Kit', img: '/assets/images/truck1.jpg', youtube: 'https://youtu.be/VIDEO_ID_1' },
+  { title: 'Roof Rack Build', img: '/assets/images/truck2.jpg', youtube: 'https://youtu.be/VIDEO_ID_2' },
+  { title: 'Overlanding Trip Setup', img: '/assets/images/truck3.jpg', youtube: 'https://youtu.be/VIDEO_ID_3' },
+];
+---
+
+<BaseLayout title="Projects | Overlanding Builds">
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-100 mb-8">Projects</h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map(project => (
+        <a href={project.youtube} target="_blank" class="group rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all">
+          <img src={project.img} alt={project.title} class="w-full h-56 object-cover group-hover:brightness-90 transition-all"/>
+          <div class="p-4 bg-gray-900">
+            <h2 class="text-xl font-semibold text-gray-200">{project.title}</h2>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 </BaseLayout>
