@@ -1,11 +1,28 @@
-import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="RealSystem | Overlanding & Builds">
-    <section class="min-h-screen flex items-center justify-center text-center">
-        <div>
-            <h1 class="text-5xl font-bold mb-4">Overlanding. Builds. Travel.</h1>
-            <p class="text-zinc-400 mb-6">Custom trucks, real expeditions, no fluff.</p>
-            <a href="https://youtube.com" class="px-6 py-3 bg-gradient-to-r from-sand to-earth text-black rounded-lg">Visit YouTube</a>
-        </div>
-    </section>
+import BaseLayout from '../layouts/BaseLayout.astro';
+const youtubeUrl = 'https://www.youtube.com/@yourchannel';
+---
+
+<BaseLayout title="Home | Overlanding Builds">
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h1 class="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-500 animate-gradient-x">
+      Overlanding. Builds. Travel.
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-xl">
+      Custom trucks, real expeditions, and off-road adventures. Follow along for authentic builds and travel stories.
+    </p>
+    <a href={youtubeUrl} target="_blank" class="mt-8 px-8 py-4 bg-amber-500 hover:bg-amber-600 rounded-lg font-semibold text-gray-900 transition-all">
+      Visit YouTube
+    </a>
+  </section>
+
+  <section class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-100 mb-8">Featured Videos</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Replace with your real video URLs -->
+      <iframe class="w-full h-56 md:h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      <iframe class="w-full h-56 md:h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      <iframe class="w-full h-56 md:h-64 rounded-lg shadow-lg" src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+    </div>
+  </section>
 </BaseLayout>
