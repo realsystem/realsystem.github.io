@@ -1,13 +1,38 @@
+---
+// src/layouts/BaseLayout.astro
+export interface Props {
+  title?: string;
+}
 const { title } = Astro.props;
 ---
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{title}</title>
-        <link rel="stylesheet" href="/src/styles/global.css" />
-    </head>
-    <body>
-        <slot />
-    </body>
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ?? 'Overlanding Builds'}</title>
+    <link rel="stylesheet" href="/dist/style.css" />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-sans min-h-screen">
+    <header class="py-6 px-6 md:px-12 bg-gray-800 shadow-md">
+      <nav class="max-w-6xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-amber-400">Overland</a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="/" class="hover:text-amber-500">Home</a></li>
+          <li><a href="/about" class="hover:text-amber-500">About</a></li>
+          <li><a href="/projects" class="hover:text-amber-500">Projects</a></li>
+          <li><a href="/contact" class="hover:text-amber-500">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mt-6">
+      <slot />
+    </main>
+
+    <footer class="py-6 px-6 md:px-12 bg-gray-800 mt-12 text-center text-gray-400">
+      © {new Date().getFullYear()} Overlanding Builds
+    </footer>
+  </body>
 </html>
