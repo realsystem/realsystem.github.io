@@ -33,7 +33,15 @@ jobs:
         run: npm install
 
       - name: Build site
-        run: npm run build
+        run: |
+          echo "Node version:"
+          node -v
+          echo "NPM version:"
+          npm -v
+          echo "Running build..."
+          npm run build
+          echo "Build finished"
+          ls -la
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
