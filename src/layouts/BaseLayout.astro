@@ -2,8 +2,46 @@
 // src/layouts/BaseLayout.astro
 export interface Props {
   title?: string;
+  description?: string;
 }
-const { title } = Astro.props;
+
+const { title, description } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const defaultTitle = 'Overlanding Project Lab';
+const defaultDescription = 'Custom overlanding builds, vehicle modifications, and off-road adventures. Follow along for authentic truck builds and expedition travel stories.';
+
+const pageTitle = title ? `${title}` : defaultTitle;
+const pageDescription = description || defaultDescription;
+
+// Navigation items
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/contact', label: 'Contact' },
+];
+
+// Check if current page is active
+const isActive = (href: string) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+};
+
+const socialLinks = [
+  { 
+    name: 'YouTube', 
+    url: 'https://www.youtube.com/@realsystemrobot',
+    icon: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'
+  },
+  { 
+    name: 'Instagram', 
+    url: 'https://instagram.com/overlandingprojectlab',
+    icon: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'
+  },
+];
 ---
 
 <!DOCTYPE html>
@@ -11,28 +49,166 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title ?? 'Overlanding Builds'}</title>
+    <meta name="description" content={pageDescription} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={pageTitle} />
+    <meta property="twitter:description" content={pageDescription} />
+    
+    <title>{pageTitle}</title>
     <link rel="stylesheet" href="/dist/style.css" />
+    
+    <!-- Favicon (add your favicon files to public folder) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body class="bg-gray-900 text-gray-100 font-sans min-h-screen">
-    <header class="py-6 px-6 md:px-12 bg-gray-800 shadow-md">
+  <body class="bg-gray-900 text-gray-100 font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 py-4 px-6 md:px-12 bg-gray-800/95 backdrop-blur-sm shadow-lg border-b border-gray-700">
       <nav class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-amber-400">Overlanding Project Lab</a>
-        <ul class="hidden md:flex space-x-6">
-          <li><a href="/" class="hover:text-amber-500">Home</a></li>
-          <li><a href="/about" class="hover:text-amber-500">About</a></li>
-          <li><a href="/projects" class="hover:text-amber-500">Projects</a></li>
-          <li><a href="/contact" class="hover:text-amber-500">Contact</a></li>
+        <!-- Logo -->
+        <a href="/" class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-500 hover:scale-105 transition-transform">
+          Overlanding Project Lab
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="hidden md:flex space-x-8">
+          {navItems.map(item => (
+            <li>
+              <a 
+                href={item.href} 
+                class={`font-medium transition-colors relative group ${
+                  isActive(item.href) 
+                    ? 'text-amber-400' 
+                    : 'text-gray-300 hover:text-amber-400'
+                }`}
+              >
+                {item.label}
+                <span class={`absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 transform origin-left transition-transform ${
+                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
+              </a>
+            </li>
+          ))}
         </ul>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          id="mobile-menu-button"
+          class="md:hidden text-gray-300 hover:text-amber-400 focus:outline-none"
+          aria-label="Toggle mobile menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </nav>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-700">
+        <ul class="flex flex-col space-y-3 pt-4">
+          {navItems.map(item => (
+            <li>
+              <a 
+                href={item.href}
+                class={`block px-4 py-2 rounded-lg transition-colors ${
+                  isActive(item.href)
+                    ? 'bg-amber-500 text-gray-900 font-semibold'
+                    : 'text-gray-300 hover:bg-gray-700'
+                }`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
 
-    <main class="mt-6">
+    <!-- Main Content -->
+    <main class="flex-grow">
       <slot />
     </main>
 
-    <footer class="py-6 px-6 md:px-12 bg-gray-800 mt-12 text-center text-gray-400">
-      © {new Date().getFullYear()} Overlanding Builds
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-12 bg-gray-800 mt-auto border-t border-gray-700">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- About Section -->
+          <div>
+            <h3 class="text-lg font-bold text-amber-400 mb-3">Overlanding Project Lab</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Documenting authentic overlanding builds, vehicle modifications, and off-road adventures.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-bold text-amber-400 mb-3">Quick Links</h3>
+            <ul class="space-y-2">
+              {navItems.map(item => (
+                <li>
+                  <a href={item.href} class="text-gray-400 hover:text-amber-400 text-sm transition-colors">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <h3 class="text-lg font-bold text-amber-400 mb-3">Follow Along</h3>
+            <div class="flex space-x-4">
+              {socialLinks.map(social => (
+                <a 
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-400 hover:text-amber-400 transition-colors"
+                  aria-label={social.name}
+                >
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d={social.icon} />
+                  </svg>
+                </a>
+              ))}
+            </div>
+            <a 
+              href="mailto:overlandprojectlab@gmail.com"
+              class="inline-block mt-4 text-gray-400 hover:text-amber-400 text-sm transition-colors"
+            >
+              overlandprojectlab@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-gray-700 text-center">
+          <p class="text-gray-400 text-sm">
+            © {new Date().getFullYear()} Overlanding Project Lab. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+          menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
