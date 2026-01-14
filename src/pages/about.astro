@@ -1,19 +1,234 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const youtubeUrl = 'https://www.youtube.com/@realsystemrobot';
+
+const stats = [
+  { number: '50+', label: 'Custom Modifications' },
+  { number: '10K+', label: 'Miles Traveled' },
+  { number: '100+', label: 'Videos Created' },
+];
+
+const journey = [
+  {
+    year: '2018',
+    title: 'The Beginning',
+    description: 'Started documenting my first overlanding build and hit the trails'
+  },
+  {
+    year: '2020',
+    title: 'Expanding the Rig',
+    description: 'Major upgrades including suspension, armor, and expedition gear'
+  },
+  {
+    year: '2023',
+    title: 'Going Full-Time',
+    description: 'Committed to creating content and exploring remote destinations'
+  },
+  {
+    year: '2024',
+    title: 'Building Community',
+    description: 'Growing a community of overlanders and sharing knowledge'
+  },
+];
+
+const values = [
+  {
+    icon: '🔨',
+    title: 'Authentic Builds',
+    description: 'Real modifications done in real garages—no shortcuts, just honest work'
+  },
+  {
+    icon: '🎯',
+    title: 'Practical Solutions',
+    description: 'Focus on functional mods that improve capability, not just aesthetics'
+  },
+  {
+    icon: '🌍',
+    title: 'Adventure First',
+    description: 'Building vehicles meant to be used, not just shown off'
+  },
+];
 ---
 
 <BaseLayout title="About | Overlanding Project Lab">
-  <section class="min-h-screen px-6 py-16 max-w-3xl mx-auto text-gray-200">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
-    <p class="mb-4 leading-relaxed">
-      I'm a passionate overlanding enthusiast and truck builder. I modify my vehicles to handle the toughest terrains while documenting every step.
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center px-6 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-rose-500 mb-6">
+        About the Channel
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 leading-relaxed">
+        Building rigs. Exploring trails. Sharing the journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 px-6 bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        {stats.map(stat => (
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-amber-400 mb-2">
+              {stat.number}
+            </div>
+            <div class="text-gray-300 text-lg">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Story Section -->
+  <section class="py-20 px-6 max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-6">
+          My Story
+        </h2>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          I'm a passionate overlanding enthusiast and truck builder who believes that the best adventures happen off the beaten path. What started as weekend camping trips evolved into a full-blown passion for vehicle modification and remote exploration.
+        </p>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          Every modification I make serves a purpose—whether it's adding clearance for rocky trails, mounting recovery gear for remote situations, or creating storage solutions for extended trips. I document everything because I believe in sharing knowledge and helping others build capable rigs.
+        </p>
+        <p class="text-gray-300 leading-relaxed">
+          My goal is to inspire others to get out there, whether that's a quick weekend trip or a multi-week expedition. The outdoors is for everyone, and with the right preparation, anyone can explore confidently.
+        </p>
+      </div>
+      <div>
+        <img 
+          src="/assets/images/truck1.jpg" 
+          alt="Overlanding vehicle on the trail" 
+          class="w-full rounded-lg shadow-2xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 px-6 bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-100 text-center mb-12">
+        What I Stand For
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {values.map(value => (
+          <div class="bg-gray-900 p-8 rounded-lg shadow-xl text-center">
+            <div class="text-5xl mb-4">{value.icon}</div>
+            <h3 class="text-xl font-bold text-amber-400 mb-3">{value.title}</h3>
+            <p class="text-gray-300">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey Timeline -->
+  <section class="py-20 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-100 text-center mb-16">
+      The Journey
+    </h2>
+    <div class="space-y-8">
+      {journey.map((milestone, index) => (
+        <div class="flex gap-8 items-start">
+          <div class="flex-shrink-0 w-24 text-right">
+            <span class="text-2xl font-bold text-amber-400">{milestone.year}</span>
+          </div>
+          <div class="flex-shrink-0 mt-2">
+            <div class="w-4 h-4 rounded-full bg-amber-400"></div>
+            {index < journey.length - 1 && (
+              <div class="w-0.5 h-24 bg-gray-700 ml-1.5 mt-2"></div>
+            )}
+          </div>
+          <div class="flex-grow pb-8">
+            <h3 class="text-xl font-bold text-gray-100 mb-2">{milestone.title}</h3>
+            <p class="text-gray-300">{milestone.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Gear & Setup Section -->
+  <section class="py-20 px-6 bg-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-8 text-center">
+        My Setup
+      </h2>
+      <div class="bg-gray-900 rounded-lg p-8 shadow-xl">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold text-amber-400 mb-4">The Rig</h3>
+            <ul class="space-y-3 text-gray-300">
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Custom suspension with increased ground clearance</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Heavy-duty skid plates and rock sliders</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Expedition-grade bumpers with recovery points</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Rooftop tent and storage system</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-amber-400 mb-4">Content Creation</h3>
+            <ul class="space-y-3 text-gray-300">
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Multiple camera angles for detailed build videos</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Action cameras for trail footage</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Drone for aerial adventure shots</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-400 mr-2">•</span>
+                <span>Professional editing to share the full story</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-100 mb-6">
+      Let's Connect
+    </h2>
+    <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+      Follow my latest adventures, builds, and gear reviews on YouTube. New videos every week covering everything from bolt-on mods to multi-day expeditions.
     </p>
-    <p class="mb-4 leading-relaxed">
-      My goal is to share authentic builds, travel experiences, and real-world vehicle modifications for people who want to explore without limits.
-    </p>
-    <p class="mb-8">
-      Follow my latest adventures and builds on my <a href="https://www.youtube.com/@realsystemrobot" target="_blank" class="text-amber-400 underline hover:text-amber-500">YouTube channel</a>.
-    </p>
-    <img src="/assets/images/truck1.jpg" alt="Stan" class="w-full rounded-lg shadow-lg" />
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href={youtubeUrl} 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-8 py-4 bg-amber-500 hover:bg-amber-600 rounded-lg font-semibold text-gray-900 transition-all transform hover:scale-105 shadow-lg"
+      >
+        Subscribe on YouTube
+      </a>
+      <a 
+        href="/#videos" 
+        class="px-8 py-4 bg-gray-700 hover:bg-gray-600 rounded-lg font-semibold text-gray-100 transition-all"
+      >
+        Watch Recent Videos
+      </a>
+    </div>
   </section>
 </BaseLayout>
