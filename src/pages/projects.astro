@@ -4,34 +4,139 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Project categories for filtering
 const categories = ['All', 'Suspension', 'Armor', 'Storage', 'Electrical', 'Recovery', 'Camping'];
 
-// Projects array - easy to add new projects as you complete them
+// Projects array - now with full article content
 const projects = [
   { 
-    title: 'Truck Lift Kit Installation', 
-    img: '/assets/images/truck1.jpg', 
-    youtube: 'https://youtu.be/VIDEO_ID_1',
+    title: 'Truck Lift Kit Installation',
+    slug: 'truck-lift-kit-installation',
+    heroImg: '/assets/images/projects/lift-kit-hero.jpg',
     category: 'Suspension',
     difficulty: 'Advanced',
     year: '2024',
-    description: 'Complete suspension overhaul with 3-inch lift kit for improved ground clearance'
+    date: 'March 15, 2024',
+    readTime: '8 min read',
+    excerpt: 'Complete suspension overhaul with 3-inch lift kit for improved ground clearance and off-road capability.',
+    content: {
+      introduction: 'After years of hitting trails and pushing my truck to its limits, I decided it was time for a serious suspension upgrade. This project took me three weekends in the garage, but the results were worth every bolt turned.',
+      sections: [
+        {
+          heading: 'Planning the Build',
+          text: 'I spent weeks researching different lift kit options, comparing brands, and reading reviews from other overlanders. The goal was to gain 3 inches of lift while maintaining ride quality and reliability.',
+          image: '/assets/images/projects/lift-kit-planning.jpg'
+        },
+        {
+          heading: 'Parts and Tools',
+          text: 'This build required specialized tools including a spring compressor, torque wrench, and jack stands rated for heavy loads. I opted for a complete kit that included new shocks, coil springs, and all necessary hardware.',
+          image: '/assets/images/projects/lift-kit-parts.jpg'
+        },
+        {
+          heading: 'Installation Process',
+          text: 'The installation started with safely lifting the truck and removing the wheels. Each corner was tackled methodically, ensuring proper torque specs and alignment throughout. The trickiest part was compressing the new springs safely.',
+          image: '/assets/images/projects/lift-kit-install.jpg'
+        },
+        {
+          heading: 'Results and Testing',
+          text: 'The difference was immediately noticeable. Ground clearance increased significantly, and the truck handled rough terrain with confidence. After a professional alignment, it drove better than ever on the highway too.',
+          image: '/assets/images/projects/lift-kit-results.jpg'
+        }
+      ],
+      conclusion: 'This lift kit transformed my truck\'s capability. Whether you\'re planning a similar build or just curious about the process, I hope this helps. The best part? Every trail is now more accessible.',
+      tips: [
+        'Always use properly rated jack stands and never work under a vehicle supported only by a jack',
+        'Take photos of the stock setup before disassembly for reference',
+        'Have your alignment done professionally after installation',
+        'Break in new suspension components with 500 miles of varied driving before serious off-roading'
+      ]
+    },
+    youtube: 'https://youtu.be/VIDEO_ID_1'
   },
   { 
-    title: 'Custom Roof Rack Build', 
-    img: '/assets/images/truck2.jpg', 
-    youtube: 'https://youtu.be/VIDEO_ID_2',
+    title: 'Custom Roof Rack Build',
+    slug: 'custom-roof-rack-build',
+    heroImg: '/assets/images/projects/roof-rack-hero.jpg',
     category: 'Storage',
     difficulty: 'Intermediate',
     year: '2023',
-    description: 'DIY aluminum roof rack with integrated lighting and mounting points'
+    date: 'September 8, 2023',
+    readTime: '6 min read',
+    excerpt: 'DIY aluminum roof rack with integrated lighting and mounting points for expedition gear.',
+    content: {
+      introduction: 'Store-bought roof racks were either too expensive or didn\'t have the features I needed. So I decided to build my own custom aluminum rack with exactly the mounting points and layout I wanted.',
+      sections: [
+        {
+          heading: 'Design Phase',
+          text: 'I sketched multiple designs, considering weight distribution, aerodynamics, and mounting locations for lights, awning, and recovery boards. The final design balanced functionality with a clean look.',
+          image: '/assets/images/projects/roof-rack-design.jpg'
+        },
+        {
+          heading: 'Materials and Fabrication',
+          text: 'Using 1.5-inch aluminum tubing and corner gussets, I cut and welded the main frame. Aluminum was chosen for its strength-to-weight ratio and corrosion resistance, perfect for all-weather use.',
+          image: '/assets/images/projects/roof-rack-fab.jpg'
+        },
+        {
+          heading: 'Mounting and Accessories',
+          text: 'The rack mounts to the factory roof rails with custom brackets. I integrated LED light bar mounts, tie-down points, and a quick-release system for the MaxTrax recovery boards.',
+          image: '/assets/images/projects/roof-rack-mount.jpg'
+        },
+        {
+          heading: 'Final Assembly',
+          text: 'After powder coating for durability, final assembly included wiring the LED lights through weatherproof conduit. The rack adds minimal wind noise and has proven incredibly useful on every trip.',
+          image: '/assets/images/projects/roof-rack-final.jpg'
+        }
+      ],
+      conclusion: 'Building a custom roof rack was more affordable than buying commercial options and gave me exactly what I needed. The skills learned here apply to many other custom fabrication projects.',
+      tips: [
+        'Calculate weight capacity carefully and stay well under your vehicle\'s roof load rating',
+        'Use rubber or foam between the rack and roof to prevent paint damage',
+        'Wire LED lights through a relay to avoid draining the battery',
+        'Consider aerodynamics in your design to minimize fuel economy impact'
+      ]
+    },
+    youtube: 'https://youtu.be/VIDEO_ID_2'
   },
   { 
-    title: 'Overlanding Trip Setup', 
-    img: '/assets/images/truck3.jpg', 
-    youtube: 'https://youtu.be/VIDEO_ID_3',
+    title: 'Overlanding Trip Setup',
+    slug: 'overlanding-trip-setup',
+    heroImg: '/assets/images/projects/trip-setup-hero.jpg',
     category: 'Camping',
     difficulty: 'Beginner',
     year: '2024',
-    description: 'Complete expedition prep including rooftop tent and storage solutions'
+    date: 'January 20, 2024',
+    readTime: '5 min read',
+    excerpt: 'Complete expedition prep including rooftop tent, storage solutions, and essential gear organization.',
+    content: {
+      introduction: 'Preparing for a multi-day overlanding trip requires careful planning and organization. This article covers how I set up my truck for a week-long expedition into remote backcountry.',
+      sections: [
+        {
+          heading: 'Rooftop Tent Setup',
+          text: 'The rooftop tent is the centerpiece of my camp setup. Mounting it securely to the roof rack and ensuring it opens smoothly took some adjustment, but now deployment takes just two minutes.',
+          image: '/assets/images/projects/trip-rtt.jpg'
+        },
+        {
+          heading: 'Storage Organization',
+          text: 'Every piece of gear has its place. I use weatherproof storage boxes in the bed, drawer systems for tools and recovery gear, and roof-mounted storage for lighter items like camping chairs and tarps.',
+          image: '/assets/images/projects/trip-storage.jpg'
+        },
+        {
+          heading: 'Water and Food Systems',
+          text: 'Carrying 20 gallons of fresh water in jerry cans, plus a portable fridge for food, means I can stay off-grid for a week. The fridge runs off the truck\'s auxiliary battery system.',
+          image: '/assets/images/projects/trip-water.jpg'
+        },
+        {
+          heading: 'Recovery and Safety Gear',
+          text: 'Recovery boards, traction pads, a hi-lift jack, and a full first aid kit are always accessible. A satellite communicator provides emergency contact when cell service isn\'t available.',
+          image: '/assets/images/projects/trip-recovery.jpg'
+        }
+      ],
+      conclusion: 'A well-organized overlanding setup makes every trip more enjoyable and safer. Start with the essentials and build your system over time based on your actual needs on the trail.',
+      tips: [
+        'Create a checklist and use it before every trip',
+        'Keep recovery gear accessible, not buried under other equipment',
+        'Test all systems in your backyard before heading into remote areas',
+        'Pack heavier items low and centered for better vehicle stability'
+      ]
+    },
+    youtube: 'https://youtu.be/VIDEO_ID_3'
   },
 ];
 
@@ -50,7 +155,7 @@ const stats = [
         Build Projects
       </h1>
       <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-        Years of modifications, upgrades, and custom fabrication—all documented for you to follow along
+        Detailed build guides with photos, tips, and lessons learned from years of modifications
       </p>
     </div>
   </section>
@@ -71,7 +176,7 @@ const stats = [
     </div>
   </section>
 
-  <!-- Filter Section (for future use) -->
+  <!-- Filter Section -->
   <section class="py-12 px-6 bg-gray-900">
     <div class="max-w-6xl mx-auto">
       <div class="flex flex-wrap justify-center gap-3">
@@ -90,48 +195,136 @@ const stats = [
     </div>
   </section>
 
-  <!-- Projects Grid -->
+  <!-- Projects List -->
   <section class="py-16 px-6 max-w-6xl mx-auto">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-      {projects.map(project => (
+    <div class="space-y-16" id="projects-list">
+      {projects.map((project, index) => (
         <article 
-          class="group rounded-lg overflow-hidden shadow-xl bg-gray-900 transform hover:scale-105 transition-all project-card"
+          class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-2xl"
           data-category={project.category}
+          id={project.slug}
         >
-          <a href={project.youtube} target="_blank" rel="noopener noreferrer" class="block">
-            <div class="relative overflow-hidden">
-              <img 
-                src={project.img} 
-                alt={project.title} 
-                class="w-full h-56 object-cover group-hover:brightness-75 transition-all"
-              />
-              <div class="absolute top-3 right-3 bg-gray-900/90 px-3 py-1 rounded-full text-xs font-semibold text-amber-400">
-                {project.year}
-              </div>
-              <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <span class="text-white text-5xl">▶</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="text-xs font-semibold px-2 py-1 rounded bg-gray-800 text-amber-400">
+          <!-- Article Header -->
+          <div class="relative h-64 md:h-96 overflow-hidden">
+            <img 
+              src={project.heroImg}
+              alt={project.title}
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500 text-gray-900">
                   {project.category}
                 </span>
-                <span class="text-xs text-gray-500">•</span>
-                <span class="text-xs text-gray-400">{project.difficulty}</span>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-gray-800/80 text-gray-300">
+                  {project.difficulty}
+                </span>
+                <span class="text-gray-300 text-sm">{project.date}</span>
+                <span class="text-gray-400 text-sm">•</span>
+                <span class="text-gray-300 text-sm">{project.readTime}</span>
               </div>
-              <h2 class="text-xl font-semibold text-gray-100 mb-2 group-hover:text-amber-400 transition-colors">
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
                 {project.title}
               </h2>
-              <p class="text-gray-400 text-sm line-clamp-2">
-                {project.description}
+              <p class="text-gray-300 text-lg">
+                {project.excerpt}
               </p>
-              <div class="mt-4 flex items-center text-amber-400 text-sm font-medium">
-                Watch Build Video 
-                <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </div>
+
+          <!-- Article Content -->
+          <div class="p-6 md:p-10">
+            <!-- Introduction -->
+            <div class="prose prose-invert max-w-none mb-8">
+              <p class="text-gray-300 text-lg leading-relaxed">
+                {project.content.introduction}
+              </p>
+            </div>
+
+            <!-- Content Sections -->
+            {project.content.sections.map((section, sectionIndex) => (
+              <div class="mb-10">
+                <h3 class="text-2xl font-bold text-amber-400 mb-4">
+                  {section.heading}
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                  <div class={sectionIndex % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
+                    <p class="text-gray-300 leading-relaxed">
+                      {section.text}
+                    </p>
+                  </div>
+                  <div class={sectionIndex % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
+                    <img 
+                      src={section.image}
+                      alt={section.heading}
+                      class="w-full rounded-lg shadow-lg"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <!-- Conclusion -->
+            <div class="mb-8 p-6 bg-gray-900 rounded-lg border-l-4 border-amber-400">
+              <h3 class="text-xl font-bold text-gray-100 mb-3">
+                Final Thoughts
+              </h3>
+              <p class="text-gray-300 leading-relaxed">
+                {project.content.conclusion}
+              </p>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="mb-10 p-6 bg-gradient-to-br from-amber-500/10 to-rose-500/10 rounded-lg border border-amber-500/30">
+              <h3 class="text-xl font-bold text-amber-400 mb-4 flex items-center">
+                <span class="mr-2">💡</span>
+                Pro Tips
+              </h3>
+              <ul class="space-y-3">
+                {project.content.tips.map(tip => (
+                  <li class="flex items-start text-gray-300">
+                    <span class="text-amber-400 mr-3 mt-1">•</span>
+                    <span>{tip}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Video Section -->
+            <div class="border-t border-gray-700 pt-8">
+              <h3 class="text-2xl font-bold text-gray-100 mb-4">
+                Watch the Full Build Video
+              </h3>
+              <p class="text-gray-400 mb-6">
+                See the entire process in action with detailed explanations and real-time tips.
+              </p>
+              <div class="aspect-video rounded-lg overflow-hidden shadow-2xl">
+                <iframe 
+                  class="w-full h-full"
+                  src={project.youtube.replace('youtu.be/', 'youtube.com/embed/')}
+                  title={`${project.title} - Build Video`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                />
               </div>
             </div>
-          </a>
+
+            <!-- Share Section -->
+            <div class="mt-8 pt-6 border-t border-gray-700 flex items-center justify-between flex-wrap gap-4">
+              <div class="text-gray-400 text-sm">
+                Published {project.date} • {project.year}
+              </div>
+              <div class="flex gap-3">
+                <a 
+                  href={`#${project.slug}`}
+                  class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-300 rounded-lg text-sm transition-colors"
+                >
+                  Link to Article
+                </a>
+              </div>
+            </div>
+          </div>
         </article>
       ))}
     </div>
@@ -144,7 +337,7 @@ const stats = [
         More Projects Coming Soon
       </h2>
       <p class="text-gray-300 text-lg mb-8">
-        I'm constantly working on new modifications and upgrades. Subscribe to stay updated on the latest builds.
+        I'm constantly working on new modifications and documenting every step. Subscribe to stay updated.
       </p>
       <a 
         href="https://www.youtube.com/@realsystemrobot?sub_confirmation=1"
@@ -157,23 +350,23 @@ const stats = [
     </div>
   </section>
 
-  <!-- Project Ideas Section -->
+  <!-- Upcoming Projects -->
   <section class="py-20 px-6 max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-gray-100 text-center mb-12">
       What's Next?
     </h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center border border-gray-700 hover:border-amber-400 transition-colors">
         <div class="text-4xl mb-4">🔩</div>
         <h3 class="text-xl font-bold text-amber-400 mb-2">Rock Sliders</h3>
         <p class="text-gray-300 text-sm">Custom welded protection for challenging trails</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center border border-gray-700 hover:border-amber-400 transition-colors">
         <div class="text-4xl mb-4">⚡</div>
         <h3 class="text-xl font-bold text-amber-400 mb-2">Dual Battery System</h3>
         <p class="text-gray-300 text-sm">Extended power for off-grid camping</p>
       </div>
-      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl text-center border border-gray-700 hover:border-amber-400 transition-colors">
         <div class="text-4xl mb-4">🎒</div>
         <h3 class="text-xl font-bold text-amber-400 mb-2">Drawer System</h3>
         <p class="text-gray-300 text-sm">Organized bed storage solution</p>
@@ -183,7 +376,7 @@ const stats = [
 </BaseLayout>
 
 <script>
-  // Simple category filter functionality
+  // Category filter functionality
   document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.category-filter');
     const projectCards = document.querySelectorAll('.project-card');
@@ -196,14 +389,22 @@ const stats = [
         filterButtons.forEach(btn => btn.setAttribute('data-active', 'false'));
         button.setAttribute('data-active', 'true');
 
-        // Filter projects
+        // Filter projects with smooth animation
         projectCards.forEach(card => {
           const cardCategory = card.getAttribute('data-category');
           if (category === 'All' || cardCategory === category) {
             card.style.display = 'block';
+            setTimeout(() => card.style.opacity = '1', 10);
           } else {
-            card.style.display = 'none';
+            card.style.opacity = '0';
+            setTimeout(() => card.style.display = 'none', 300);
           }
+        });
+
+        // Scroll to projects
+        document.getElementById('projects-list')?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
         });
       });
     });
@@ -211,10 +412,8 @@ const stats = [
 </script>
 
 <style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  .project-card {
+    opacity: 1;
+    transition: opacity 0.3s ease;
   }
 </style>
