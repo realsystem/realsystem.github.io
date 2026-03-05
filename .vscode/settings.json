@@ -1,0 +1,29 @@
+{
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontSize": 16,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.formatOnSave": false
+  },
+  "markdownlint.config": {
+    "MD033": false,
+    "MD013": false
+  },
+  "pasteImage.path": "${projectRoot}/public/assets/images/projects",
+  "pasteImage.basePath": "${projectRoot}/public",
+  "pasteImage.prefix": "/assets/images/projects/",
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.DS_Store": true,
+    "**/dist": true
+  }
+}

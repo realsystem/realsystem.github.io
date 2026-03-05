@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "mushan.vscode-paste-image",
+    "davidanson.vscode-markdownlint",
+    "kisstkondoros.vscode-gutter-preview",
+    "bierner.markdown-preview-github-styles",
+    "shd101wyy.markdown-preview-enhanced"
+  ]
+}
