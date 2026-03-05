@@ -8,47 +8,6 @@ const stats = [
   { number: '10K+', label: 'Miles Traveled' },
   { number: '100+', label: 'Videos Created' },
 ];
-
-const journey = [
-  {
-    year: '2018',
-    title: 'The Beginning',
-    description: 'Started documenting my first overlanding build and hit the trails'
-  },
-  {
-    year: '2020',
-    title: 'Expanding the Rig',
-    description: 'Major upgrades including suspension, armor, and expedition gear'
-  },
-  {
-    year: '2023',
-    title: 'Going Full-Time',
-    description: 'Committed to creating content and exploring remote destinations'
-  },
-  {
-    year: '2024',
-    title: 'Building Community',
-    description: 'Growing a community of overlanders and sharing knowledge'
-  },
-];
-
-const values = [
-  {
-    icon: '🔨',
-    title: 'Authentic Builds',
-    description: 'Real modifications done in real garages—no shortcuts, just honest work'
-  },
-  {
-    icon: '🎯',
-    title: 'Practical Solutions',
-    description: 'Focus on functional mods that improve capability, not just aesthetics'
-  },
-  {
-    icon: '🌍',
-    title: 'Adventure First',
-    description: 'Building vehicles meant to be used, not just shown off'
-  },
-];
 ---
 
 <BaseLayout title="About | Overlanding Project Lab">
@@ -104,50 +63,6 @@ const values = [
           class="w-full rounded-lg shadow-2xl"
         />
       </div>
-    </div>
-  </section>
-
-  <!-- Values Section -->
-  <section class="py-20 px-6 bg-bg-secondary">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-text-primary text-center mb-12">
-        What I Stand For
-      </h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        {values.map(value => (
-          <div class="bg-bg-primary p-8 rounded-lg shadow-xl text-center">
-            <div class="text-5xl mb-4">{value.icon}</div>
-            <h3 class="text-xl font-bold text-accent mb-3">{value.title}</h3>
-            <p class="text-text-secondary">{value.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Journey Timeline -->
-  <section class="py-20 px-6 max-w-5xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold text-text-primary text-center mb-16">
-      The Journey
-    </h2>
-    <div class="space-y-8">
-      {journey.map((milestone, index) => (
-        <div class="flex gap-8 items-start">
-          <div class="flex-shrink-0 w-24 text-right">
-            <span class="text-2xl font-bold text-accent">{milestone.year}</span>
-          </div>
-          <div class="flex-shrink-0 mt-2">
-            <div class="w-4 h-4 rounded-full bg-accent"></div>
-            {index < journey.length - 1 && (
-              <div class="w-0.5 h-24 bg-bg-tertiary ml-1.5 mt-2"></div>
-            )}
-          </div>
-          <div class="flex-grow pb-8">
-            <h3 class="text-xl font-bold text-text-primary mb-2">{milestone.title}</h3>
-            <p class="text-text-secondary">{milestone.description}</p>
-          </div>
-        </div>
-      ))}
     </div>
   </section>
 

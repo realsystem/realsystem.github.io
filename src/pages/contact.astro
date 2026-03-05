@@ -18,29 +18,6 @@ const socialLinks = [
   },
 ];
 
-const contactReasons = [
-  {
-    icon: '🤝',
-    title: 'Collaboration',
-    description: 'Interested in working together on a build or expedition'
-  },
-  {
-    icon: '🎥',
-    title: 'Sponsorship',
-    description: 'Product reviews, brand partnerships, or sponsored content'
-  },
-  {
-    icon: '💡',
-    title: 'Questions',
-    description: 'Technical questions about builds or gear recommendations'
-  },
-  {
-    icon: '📰',
-    title: 'Media',
-    description: 'Press inquiries or interview requests'
-  },
-];
-
 const faqs = [
   {
     question: 'Do you reply to all emails?',
@@ -67,27 +44,6 @@ const faqs = [
       <p class="text-xl md:text-2xl text-text-secondary leading-relaxed">
         Have a question, collaboration idea, or just want to say hi?
       </p>
-    </div>
-  </section>
-
-  <!-- Contact Reasons Section -->
-  <section class="py-20 px-6 bg-bg-secondary">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-text-primary text-center mb-4">
-        What Can I Help With?
-      </h2>
-      <p class="text-text-muted text-center mb-12 max-w-2xl mx-auto">
-        Whether you're looking to collaborate, need advice, or have a business inquiry—I'd love to hear from you
-      </p>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {contactReasons.map(reason => (
-          <div class="bg-bg-primary p-6 rounded-lg shadow-xl text-center hover:shadow-2xl transition-shadow">
-            <div class="text-4xl mb-3">{reason.icon}</div>
-            <h3 class="text-lg font-bold text-accent mb-2">{reason.title}</h3>
-            <p class="text-text-secondary text-sm">{reason.description}</p>
-          </div>
-        ))}
-      </div>
     </div>
   </section>
 
