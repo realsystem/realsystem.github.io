@@ -20,10 +20,12 @@ const navItems = [
   { href: '/about', label: 'About' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
+  { href: '/tires', label: 'Tires&Gears' },
 ];
 
 // Check if current page is active
-const isActive = (href: string) => {
+const isActive = (href: string, external?: boolean) => {
+  if (external) return false;
   if (href === '/') {
     return currentPath === '/';
   }
@@ -83,17 +85,18 @@ const socialLinks = [
         <ul class="hidden md:flex space-x-8">
           {navItems.map(item => (
             <li>
-              <a 
-                href={item.href} 
+              <a
+                href={item.href}
+                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 class={`font-medium transition-colors relative group ${
-                  isActive(item.href) 
-                    ? 'text-accent' 
+                  isActive(item.href, item.external)
+                    ? 'text-accent'
                     : 'text-text-secondary hover:text-accent'
                 }`}
               >
                 {item.label}
-                <span class={`absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 transform origin-left transition-transform ${
-                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                <span class={`absolute bottom-0 left-0 w-full h-0.5 bg-accent transform origin-left transition-transform ${
+                  isActive(item.href, item.external) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </a>
             </li>
@@ -117,10 +120,11 @@ const socialLinks = [
         <ul class="flex flex-col space-y-3 pt-4">
           {navItems.map(item => (
             <li>
-              <a 
+              <a
                 href={item.href}
+                {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 class={`block px-4 py-2 rounded-lg transition-colors ${
-                  isActive(item.href)
+                  isActive(item.href, item.external)
                     ? 'bg-accent text-gray-900 font-semibold'
                     : 'text-text-secondary hover:bg-bg-tertiary'
                 }`}
