@@ -9,24 +9,6 @@ const featuredVideos = [
   { id: 'dRX7S2jRmjs', title: 'Building truck camper -- Ep. 1: materials and removing the bed' },
   { id: 'Dl5wt6yTeDY', title: 'Escalante National Monument: Driving the Hole-in-the-Rock Road' },
 ];
-
-const features = [
-  {
-    title: 'Custom Builds',
-    description: 'In-depth vehicle modifications and overlanding rig builds',
-    icon: '🔧'
-  },
-  {
-    title: 'Trail Adventures',
-    description: 'Real expeditions to remote locations and challenging terrain',
-    icon: '🏔️'
-  },
-  {
-    title: 'Gear Reviews',
-    description: 'Honest reviews of equipment tested in the field',
-    icon: '⚙️'
-  }
-];
 ---
 
 <BaseLayout title="Home | Overlanding Project Lab">
@@ -56,24 +38,6 @@ const features = [
       >
         Watch Videos
       </a>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="py-20 px-6 bg-bg-secondary">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-text-primary text-center mb-12">
-        What We Cover
-      </h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        {features.map(feature => (
-          <div class="bg-bg-primary p-8 rounded-lg shadow-xl hover:shadow-2xl transition-shadow">
-            <div class="text-4xl mb-4">{feature.icon}</div>
-            <h3 class="text-xl font-bold text-accent mb-3">{feature.title}</h3>
-            <p class="text-text-secondary">{feature.description}</p>
-          </div>
-        ))}
-      </div>
     </div>
   </section>
 
