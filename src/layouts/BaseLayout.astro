@@ -1,5 +1,7 @@
 ---
 // src/layouts/BaseLayout.astro
+import '../styles/global.css';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -64,8 +66,7 @@ const socialLinks = [
     <meta property="twitter:description" content={pageDescription} />
     
     <title>{pageTitle}</title>
-    <link rel="stylesheet" href="/dist/style.css" />
-    
+
     <!-- Favicon (add your favicon files to public folder) -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
