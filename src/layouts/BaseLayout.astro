@@ -26,11 +26,13 @@ const navItems = [
   { href: '/wires', label: 'WireCalc' },
   { href: '/solar', label: 'SolarCalc' },
   { href: '/fuel', label: 'FuelCalc' },
+  // Separate app on its own subdomain: opens in the same tab (it has a back link here)
+  { href: 'https://wildwatch.overlandn.com', label: 'WildWatch', offsite: true },
 ];
 
 // Check if current page is active
 const isActive = (href: string, external?: boolean) => {
-  if (external) return false;
+  if (external) return false; // also true for offsite links, which are never the current page
   if (href === '/') {
     return currentPath === '/';
   }
@@ -93,14 +95,14 @@ const socialLinks = [
                 href={item.href}
                 {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 class={`font-medium transition-colors relative group ${
-                  isActive(item.href, item.external)
+                  isActive(item.href, item.external || item.offsite)
                     ? 'text-accent'
                     : 'text-text-secondary hover:text-accent'
                 }`}
               >
                 {item.label}
                 <span class={`absolute bottom-0 left-0 w-full h-0.5 bg-accent transform origin-left transition-transform ${
-                  isActive(item.href, item.external) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive(item.href, item.external || item.offsite) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </a>
             </li>
@@ -128,7 +130,7 @@ const socialLinks = [
                 href={item.href}
                 {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                 class={`block px-4 py-2 rounded-lg transition-colors ${
-                  isActive(item.href, item.external)
+                  isActive(item.href, item.external || item.offsite)
                     ? 'bg-accent text-gray-900 font-semibold'
                     : 'text-text-secondary hover:bg-bg-tertiary'
                 }`}
